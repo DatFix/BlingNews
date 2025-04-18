@@ -1,6 +1,7 @@
 import COLORS from '@/constants/colorIndex'
 import { IMAGES } from '@/constants/images'
 import { formatDate } from '@/lib/formatDate'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import { LiaFireSolid } from 'react-icons/lia'
@@ -20,7 +21,7 @@ export default function PostCardMini({ thumbnail, title, likes, $updatedAt, slug
             style={{ borderLeft: `4px solid ${COLORS[index as number % COLORS.length]}` }}
         >
             <div className="w-1/3">
-                <img src={thumbnail ? thumbnail : IMAGES.cate1_img.src} alt="img" className='w-full h-20 object-cover rounded-lg' />
+                <Image src={thumbnail ? thumbnail : IMAGES.cate1_img.src} alt="img" className='w-full h-20 object-cover rounded-lg' width={100} height={100} />
             </div>
             <div className="w-2/3 flex flex-col justify-between">
                 <h1 className='text-[12px] md:text-[13px] font-semibold opacity-80 transition-all duration-200 group-hover:text-pink-500 group-hover:underline'>{title.length > 80 ? `${title.slice(0, 80)}...` : title}</h1>

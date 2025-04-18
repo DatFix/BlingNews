@@ -1,4 +1,5 @@
 import { IMAGES } from '@/constants/images'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { LiaFireSolid } from 'react-icons/lia'
@@ -8,7 +9,7 @@ export default function PostCard() {
     return (
         <div className='bg-base-100 border-l-4 border-blue-500 rounded-lg shadow-2xl p-5 mb-10 hover:translate-y-2 duration-200 transition-all hover:shadow-lg cursor-pointer'>
             <div className='flex items-start justify-between gap-5'>
-                <img src={IMAGES.cate1_img.src} alt="img" className='w-40 h-4w-40 object-cover rounded-lg' />
+                <Image src={IMAGES.cate1_img.src} alt="img" className='w-40 h-4w-40 object-cover rounded-lg' width={100} height={100} />
                 <div>
                     <div className='flex items-start justify-between gap-2'>
                         <Link href={''} className='font-semibold text-lg opacity-80'>The Benefits Of Traveling With A Second Language</Link>
@@ -16,7 +17,7 @@ export default function PostCard() {
                     </div>
                     <div className='flex gap-4 items-center justify-start mt-3 mb-6'>
                         <div className='flex gap-2 items-center justify-center'>
-                            <img src={IMAGES.avatar.src} alt="img" className='w-6 h-6 rounded-full' />
+                            <Image src={IMAGES.avatar.src} alt="img" className='w-6 h-6 rounded-full' width={100} height={100} />
                             <p className='text-[12px]'>By John Doe</p>
                         </div>
                         <p className='text-[12px]'>6 Comments</p>

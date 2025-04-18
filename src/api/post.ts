@@ -1,4 +1,4 @@
-import { account, database, storage } from "@/configs/AppWriteConfig"
+import { database, storage } from "@/configs/AppWriteConfig"
 import { ID, Query } from "appwrite"
 import { getAllCategories } from "./category";
 import { getUserCurrent } from "./auth";
@@ -265,7 +265,7 @@ export const getPostByTag = async (tag: string, page: number, limit: number) => 
             total: posts.total
         }
     } catch (error) {
-
+        console.error("Error getting post by tag:", error);
     }
 }
 

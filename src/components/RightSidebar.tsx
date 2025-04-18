@@ -8,6 +8,7 @@ import BadgeHightlight from './BadgeHightlight'
 import Link from 'next/link'
 import RightSidebarSkeleton from './RightSidebarSkeleton'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 export default function RightSidebar() {
     const router = useRouter()
@@ -28,8 +29,8 @@ export default function RightSidebar() {
                     </div>
                     <Carousel autoplay arrows>
                         {PostLatestData && PostLatestData.map((item: any, index: number) => (
-                            <div className='bg-base-300 rounded-box p-3 group hover:cursor-pointer'>
-                                <img src={item.thumbnail ? item.thumbnail : IMAGES.cate1_img.src} alt="img" className='w-full aspect-video object-cover rounded-lg my-3' onClick={() => router.push(`/details/${item.slug}`)} />
+                            <div className='bg-base-300 rounded-box p-3 group hover:cursor-pointer' key={index}>
+                                <Image src={item.thumbnail ? item.thumbnail : IMAGES.cate1_img.src} alt="img" className='w-full aspect-video object-cover rounded-lg my-3' onClick={() => router.push(`/details/${item.slug}`)} width={100} height={100} quality={100} />
                                 <p className='text-sm font-semibold cursor-pointer' style={{ color: `${COLORS[index as number % COLORS.length]}` }} onClick={() => router.push(`/category/${item.categoryId.slug}`)}>#{item.categoryId.name}</p>
                                 <div className='text-lg text-gray-500 font-semibold my-3 transition-all duration-200 group-hover:underline group-hover:text-rose-500' onClick={() => router.push(`/details/${item.slug}`)}>{item.title}</div>
                             </div>

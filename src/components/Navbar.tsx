@@ -17,6 +17,7 @@ import { PiListFill } from "react-icons/pi";
 import { TbPlant2 } from "react-icons/tb";
 import { VscListSelection } from "react-icons/vsc";
 import PostCardMini from "./PostCardMini";
+import Image from "next/image";
 
 type NavbarProps = {
     onSetTheme: () => void;
@@ -160,11 +161,11 @@ export default function Navbar({ onSetTheme, currentTheme }: NavbarProps) {
                                 {currentTheme === 'dark'
                                     ?
                                     <div className={`w-5 h-5 rounded-full bg-white p-[2px] flex items-center justify-center`}>
-                                        <img src={IMAGES.moon.src} alt="" className="" />
+                                        <Image src={IMAGES.moon.src} alt="img" className="" width={100} height={100} />
                                     </div>
                                     :
                                     <div className={`w-5 h-5 rounded-full bg-white p-[2px] flex items-center justify-center`}>
-                                        <img src={IMAGES.sun.src} alt="" className="" />
+                                        <Image src={IMAGES.sun.src} alt="img" className="" width={100} height={100} />
                                     </div>
                                 }
                             </div>
@@ -197,11 +198,11 @@ export default function Navbar({ onSetTheme, currentTheme }: NavbarProps) {
                                 {currentTheme === 'dark'
                                     ?
                                     <div className={`w-5 h-5 rounded-full bg-white p-[2px] flex items-center justify-center`}>
-                                        <img src={IMAGES.moon.src} alt="" className="" />
+                                        <Image src={IMAGES.moon.src} alt="img" className="" width={100} height={100} />
                                     </div>
                                     :
                                     <div className={`w-5 h-5 rounded-full bg-white p-[2px] flex items-center justify-center`}>
-                                        <img src={IMAGES.sun.src} alt="" className="" />
+                                        <Image src={IMAGES.sun.src} alt="img" className="" width={100} height={100} />
                                     </div>
                                 }
                             </div>

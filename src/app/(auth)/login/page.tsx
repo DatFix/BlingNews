@@ -1,6 +1,7 @@
 "use client"
 import { googleLogin } from '@/api/auth'
 import { IMAGES } from '@/constants/images'
+import Image from 'next/image'
 import React from 'react'
 import { FcGoogle } from 'react-icons/fc'
 import { TbPlant2 } from 'react-icons/tb'
@@ -53,7 +54,7 @@ export default function Login() {
                     <p className='text-gray-700 text-xl font-semibold'>Bling News</p>
                 </div>
                 <h2 className='text-[#253433] text-4xl uppercase font-bold'>Đăng Nhập</h2>
-                <img src={IMAGES.login_img.src} alt='img' className='w-96 object-contain' />
+                <Image src={IMAGES.login_img.src} alt='img' className='w-96 object-contain' width={100} height={100} />
                 <div className='bg-gray-100 px-3 py-2 rounded-md shadow-2xl shadow-gray-400 active:translate-y-2 transition-all duration-300'>
                     <button className='flex items-center justify-center gap-2 text-gray-700' onClick={googleLogin}><FcGoogle size={30} /> Đăng Nhập bằng Google</button>
                 </div>
@@ -80,7 +81,7 @@ export default function Login() {
                                     <p className='text-gray-200 text-4xl font-bold'>0{index + 1}</p>
                                 </div>
                                 <div className='flex items-center justify-start gap-2 mt-2'>
-                                    <img src={IMAGES.avatar.src} className='w-6 h-6 rounded-full' />
+                                    <Image src={IMAGES.avatar.src} alt='img' className='w-6 h-6 rounded-full' width={100} height={100} />
                                     <p className='text-gray-500 text-[11px]'>{item.author}</p>
                                 </div>
                             </div>
@@ -97,7 +98,7 @@ export default function Login() {
                         <div className='flex gap-5 py-2'>
                             {cardCate.map((item, index) => (
                                 <div key={index} className='relative'>
-                                    <img src={item.image.src} className='w-48 h-48 object-cover rounded-lg' />
+                                    <Image src={item.image.src} alt='img' className='w-48 h-48 object-cover rounded-lg' width={100} height={100} />
                                     <div className={`absolute inset-0 flex items-center pt-40 justify-center text-[12px] font-semibold text-white bg-gradient-to-tr ${item.color} to-gray-200 opacity-90 rounded-lg`}>
                                         <div className='flex flex-col items-center justify-center'>
                                             <p>{item.title}</p>
@@ -120,7 +121,7 @@ export default function Login() {
                                     <div className='bg-white px-3 py-1 rounded-lg border-b-4 shadow-2xl shadow-gray-300 ' style={{ borderColor: `${item.color}` }} key={index}>
                                         <p className='text-md text-gray-700 font-semibold'>{item.title}</p>
                                         <div className='flex items-center justify-start gap-2'>
-                                            <img src={IMAGES.avatar.src} alt="img" className='w-6 h-6 rounded-full' />
+                                            <Image src={IMAGES.avatar.src} alt="img" className='w-6 h-6 rounded-full' width={100} height={100} />
                                             <p className='text-gray-500 text-[11px]'>{item.author}</p>
                                         </div>
                                         <div className='w-10 h-10 flex items-center justify-center rounded-md ml-auto my-1 mr-1' style={{ backgroundColor: `${item.color}` }}>
@@ -135,20 +136,22 @@ export default function Login() {
                             <div className="slider flex">
                                 {images.map((img, index) => (
                                     <div key={`original-${index}`} className="slide-item flex-none mx-1">
-                                        <img
+                                        <Image
                                             src={img.src}
                                             alt={img.alt}
                                             className="w-60 h-40 object-cover rounded"
+                                            width={100} height={100}
                                         />
                                     </div>
                                 ))}
                                 {/* Duplicate the images to create the seamless loop effect */}
                                 {images.map((img, index) => (
                                     <div key={`duplicate-${index}`} className="slide-item flex-none mx-1">
-                                        <img
+                                        <Image
                                             src={img.src}
                                             alt={img.alt}
                                             className="w-60 h-40 object-cover rounded"
+                                            width={100} height={100}
                                         />
                                     </div>
                                 ))}

@@ -11,8 +11,8 @@ export default function AboutPage() {
         <div className="">
           <div className="bg-base-100 shadow-2xl rounded-lg overflow-hidden">
             <div className="grid-cols-1 md:flex ">
-              <img src={IMAGES.about1.src} alt="img" className="w-1/2 object-cover hidden md:block" />
-              <img src={IMAGES.about2.src} alt="img" className="w-full md:w-1/2 object-cover" />
+              <Image src={IMAGES.about1.src} alt="img" className="w-1/2 object-cover hidden md:block" width={100} height={100} />
+              <Image src={IMAGES.about2.src} alt="img" className="w-full md:w-1/2 object-cover" width={100} height={100} />
             </div>
             <div className="p-6">
               <h1 className="text-3xl font-bold mb-6">Về BlingNews</h1>
@@ -71,6 +71,7 @@ export default function AboutPage() {
                           alt="Nguyễn Văn A"
                           fill
                           className="object-cover"
+                          width={100} height={100}
                         />
                       </div>
                       <div>
@@ -92,6 +93,7 @@ export default function AboutPage() {
                           alt="Trần Thị B"
                           fill
                           className="object-cover"
+                          width={100} height={100}
                         />
                       </div>
                       <div>

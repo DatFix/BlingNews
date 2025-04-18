@@ -22,6 +22,7 @@ import { MdOutlineCameraAlt } from 'react-icons/md'
 import PostsCardSkeleton from '@/components/PostsCardSkeleton'
 import LeftProfileSidebar from '@/components/LeftProfileSidebar'
 import PostsCard from '@/components/PostsCard'
+import Image from 'next/image'
 
 export default function Profile() {
   const [title, setTitle] = useState<string>("");
@@ -195,12 +196,13 @@ export default function Profile() {
                   {/* Avatar + Upload */}
                   <div className="relative flex items-center justify-center">
                     {preview ? (
-                      <img src={preview} alt="" className="w-20 h-20 rounded-full object-cover" />
+                      <Image src={preview} alt="" className="w-20 h-20 rounded-full object-cover"  width={100} height={100}/>
                     ) : (
-                      <img
+                      <Image
                         src={userCurrent?.imageUrl}
                         alt="img"
                         className="w-20 h-20 rounded-full object-cover"
+                        width={100} height={100}
                       />
                     )}
                     <label
@@ -299,7 +301,7 @@ export default function Profile() {
               <p className='text-sm'>Thông tin cá nhân</p>
 
               <div className='flex flex-col items-center justify-center gap-3 my-5 '>
-                <img src={userCurrent?.imageUrl ?? IMAGES.avatar.src} alt="img" className='w-20 h-20 rounded-full object-cover' />
+                <Image src={userCurrent?.imageUrl ?? IMAGES.avatar.src} alt="img" className='w-20 h-20 rounded-full object-cover' width={100} height={100} />
                 <h4 className='text-lg font-semibold opacity-80 leading-2'>{userCurrent?.username}</h4>
                 <p className='text-[12px] leading-1'>{userCurrent?.nickName ?? '@UserGuest'}</p>
               </div>
@@ -453,10 +455,11 @@ export default function Profile() {
 
                             {preview ? (
                               <div className="mt-4 text-center relative group inline-block">
-                                <img
+                                <Image
                                   src={preview}
                                   alt="Thumbnail preview"
                                   className="w-32 h-32 object-cover rounded-md shadow-sm"
+                                  width={100} height={100}
                                 />
 
                                 <div

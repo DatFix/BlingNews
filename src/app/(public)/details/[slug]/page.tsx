@@ -21,6 +21,7 @@ import { BiLike } from 'react-icons/bi';
 import { BiSolidLike } from "react-icons/bi";
 import EmptyData from '@/components/Empty';
 import ScrollTop from '@/components/ScrollTop';
+import Image from 'next/image';
 
 
 export default function DetailsPost() {
@@ -77,8 +78,8 @@ export default function DetailsPost() {
           <ScrollTop />
           <div className='w-full md:w-2/3 bg-base-100 p-5 rounded-lg'>
             <div className='relative'>
-              <img src={DetailsPost?.thumbnail ? DetailsPost?.thumbnail : IMAGES.cate1_img.src} alt="img" className='w-full h-auto object-cover rounded-lg ' />
-              <img src={DetailsPost?.authorId?.imageUrl ? DetailsPost?.authorId?.imageUrl : IMAGES.avatar.src} alt="img" className="w-24 h-24 rounded-full bg-white object-cover object-center absolute left-1/2 -translate-x-1/2 -bottom-10 p-[6px]" />
+              <Image src={DetailsPost?.thumbnail ? DetailsPost?.thumbnail : IMAGES.cate1_img.src} alt="img" className='w-full h-auto object-cover rounded-lg ' width={100} height={100} />
+              <Image src={DetailsPost?.authorId?.imageUrl ? DetailsPost?.authorId?.imageUrl : IMAGES.avatar.src} alt="img" className="w-24 h-24 rounded-full bg-white object-cover object-center absolute left-1/2 -translate-x-1/2 -bottom-10 p-[6px]" width={100} height={100} />
             </div>
 
             <div className='mt-12 mb-5'>
@@ -125,7 +126,7 @@ export default function DetailsPost() {
                   {Comments && Comments.map((item: any, index: number) => (
                     <div className='flex items-center gap-2 my-4' key={index}>
                       <div className='flex flex-col items-center justify-center'>
-                        <img src={item?.userId?.imageUrl} alt="img" className='w-8 h-8 rounded-full object-cover' />
+                        <Image src={item?.userId?.imageUrl} alt="img" className='w-8 h-8 rounded-full object-cover' width={100} height={100} />
                       </div>
                       <div>
                         <p className='text-[12px] font-semibold opacity-80 pl-1'>{item?.userId?.nickName}</p>
