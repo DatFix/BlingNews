@@ -6,8 +6,8 @@ export const googleLogin = async () => {
         const isDev = process.env.NODE_ENV === "development";
 
         const baseUrl = isDev
-            ? "http://localhost:3000"
-            : process.env.NEXT_PUBLIC_APP_DOMAIN!;
+            ? process.env.NEXT_PUBLIC_APP_DOMAIN!
+            : "http://localhost:3000"
 
         await account.createOAuth2Session(
             OAuthProvider.Google,
