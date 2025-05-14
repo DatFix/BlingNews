@@ -19,7 +19,7 @@ export default function PostsCard({ title, categoryId, authorId, description, ta
                 <div className='bg-base-100 rounded-lg shadow-2xl p-5 mb-10 hover:translate-y-2 duration-200 transition-all hover:shadow-lg cursor-pointer' style={{ borderLeft: `4px solid ${cateColor}` }}>
                     <div className='grid md:flex gap-5 w-full'>
                         <div className='w-full md:w-1/4'>
-                            <Image src={thumbnail ? thumbnail as string : IMAGES.cate1_img.src} alt="img" className='w-full md:w-40 aspect-square object-cover rounded-lg' width={100} height={100} quality={100} />
+                            <Image src={thumbnail ? thumbnail as string : IMAGES.cate1_img.src} alt="img" className='w-full md:w-40 md:aspect-square aspect-video object-cover rounded-lg' width={100} height={100} quality={100} />
                         </div>
                         <div className='w-full md:w-3/4'>
                             <div className='flex w-full justify-between gap-2 mt-3'>

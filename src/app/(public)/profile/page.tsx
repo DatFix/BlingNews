@@ -364,7 +364,7 @@ export default function Profile() {
 
           <div className='w-full md:w-2/3 p-5'>
             <div className='flex items-center justify-between mb-5'>
-              <h4 className='text-xl font-semibold opacity-80'>Bài viết gần đây</h4>
+              <h4 className='text-xl font-semibold opacity-80'>Bài viết của bạn</h4>
               <button className='btn btn-primary btn-sm' onClick={toggleModal}>Bài viết mới</button>
             </div>
 

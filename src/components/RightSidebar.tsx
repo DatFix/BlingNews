@@ -32,7 +32,7 @@ export default function RightSidebar() {
                             <div className='bg-base-300 rounded-box p-3 group hover:cursor-pointer' key={index}>
                                 <Image src={item.thumbnail ? item.thumbnail : IMAGES.cate1_img.src} alt="img" className='w-full aspect-video object-cover rounded-lg my-3' onClick={() => router.push(`/details/${item.slug}`)} width={100} height={100} quality={100} />
                                 <p className='text-sm font-semibold cursor-pointer' style={{ color: `${COLORS[index as number % COLORS.length]}` }} onClick={() => router.push(`/category/${item.categoryId.slug}`)}>#{item.categoryId.name}</p>
-                                <div className='text-lg text-gray-500 font-semibold my-3 transition-all duration-200 group-hover:underline group-hover:text-rose-500' onClick={() => router.push(`/details/${item.slug}`)}>{item.title}</div>
+                                <div className='text-lg text-gray-500 font-semibold my-3 transition-all duration-200 group-hover:underline group-hover:text-rose-500 h-14' onClick={() => router.push(`/details/${item.slug}`)}>{item.title}</div>
                             </div>
                         ))}
                     </Carousel>

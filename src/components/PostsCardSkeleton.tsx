@@ -5,7 +5,7 @@ export default function PostsCardSkeleton() {
         <div className='bg-primary/5 animate-pulse p-5 rounded-lg mb-10'>
             <div className='grid-cols-1 md:flex items-start justify-between gap-5 w-full'>
                 <div className='w-full md:w-1/3'>
-                    <div className='w-full aspect-square rounded-lg bg-primary/10 animate-pulse'></div>
+                    <div className='w-full md:aspect-square aspect-video rounded-lg bg-primary/10 animate-pulse'></div>
                 </div>
 
                 <div className='flex-1 w-full md:w-2/3 mt-3'>
